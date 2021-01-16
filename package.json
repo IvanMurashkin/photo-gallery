@@ -158,6 +158,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-redux": "^7.1.15"
+    "@types/react-redux": "^7.1.15",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
