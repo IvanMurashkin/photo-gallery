@@ -1,6 +1,10 @@
 import React, { ReactElement } from "react"
-import "./App.css"
+import { AlbumCard } from "./components/AlbumCard"
 
 export const App = (): ReactElement => {
-  return <div className="app"></div>
+  return (
+    <div className="app">
+      <AlbumCard />
+    </div>
+  )
 }
