@@ -6,6 +6,8 @@ import { Photos } from "./components/Photos"
 import { getAlbums } from "./store/album/actions"
 import { getPhotos } from "./store/photo/actions"
 
+import style from "./App.module.css"
+
 export const App = (): ReactElement => {
   const dispatch = useDispatch()
 
@@ -15,7 +17,7 @@ export const App = (): ReactElement => {
   }, [])
 
   return (
-    <div className="app">
+    <div className={style.app}>
       <Switch>
         <Route exact path="/" component={Albums} />
         <Route path="/albums/:albumId/photos" component={Photos} />
