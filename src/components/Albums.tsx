@@ -1,17 +1,12 @@
-import React, { ReactElement, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { getAlbums } from "../store/album/actions"
+import React, { ReactElement } from "react"
+import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import { RootState } from "../store/store"
 import { AlbumCard } from "./AlbumCard"
 import style from "./Albums.module.css"
 
 export const Albums = (): ReactElement => {
   const albums = useSelector((state: RootState) => state.albums)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getAlbums())
-  }, [])
 
   return (
     <div className={style.albums}>
